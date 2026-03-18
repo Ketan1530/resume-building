@@ -3,3 +3,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Print styles for resume export */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #resume-preview,
+  #resume-preview * {
+    visibility: visible;
+  }
+  
+  #resume-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}
