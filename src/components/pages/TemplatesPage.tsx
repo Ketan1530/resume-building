@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useResumeStore } from '@/store/resumeStore';
-import { useNavigate } from 'react-router-dom';
-import { Check } from 'lucide-react';
+import Header from '@/components/Header';
 import { Image } from '@/components/ui/image';
+import { useResumeStore } from '@/store/resumeStore';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const categories = ['All', 'Professional'];
 
@@ -36,7 +36,7 @@ export default function TemplatesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      
+
       <div className="pt-32 pb-20 px-8">
         <div className="max-w-[100rem] mx-auto">
           <motion.div
@@ -98,7 +98,7 @@ export default function TemplatesPage() {
                   <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
                     {template.name}
                   </h3>
-                  
+
                   <p className="font-paragraph text-sm text-foreground/60 mb-4">
                     {template.category}
                   </p>
