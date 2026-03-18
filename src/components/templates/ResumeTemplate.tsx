@@ -9,6 +9,17 @@ interface ResumeTemplateProps {
 export default function ResumeTemplate({ data, templateId }: ResumeTemplateProps) {
   const { personalInfo, sectionOrder } = data;
 
+  // Ensure we have valid data to render
+  if (!personalInfo || !sectionOrder) {
+    return (
+      <div className="bg-white text-gray-900 p-8 shadow-lg rounded-lg max-w-4xl mx-auto font-paragraph">
+        <div className="text-center py-12">
+          <p className="text-gray-500">No resume data available. Please fill in your information.</p>
+        </div>
+      </div>
+    );
+  }
+
   const renderSection = (sectionName: string) => {
     switch (sectionName) {
       case 'experience':

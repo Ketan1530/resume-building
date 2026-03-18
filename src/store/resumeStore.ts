@@ -121,7 +121,7 @@ export const useResumeStore = create<ResumeStore>()(
   persist(
     (set) => ({
       resumeData: initialResumeData,
-      selectedTemplate: 'modern-1',
+      selectedTemplate: 'professional-1',
 
       updatePersonalInfo: (info) =>
         set((state) => ({
